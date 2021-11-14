@@ -90,9 +90,7 @@ class Game extends React.Component {
       return;
     }
 
-    // set the sqaure
     squares[i] = (this.state.xIsNext ? 'X' : 'O');
-    // now update the state 
     this.setState({
       history: history.concat([
         {
@@ -111,8 +109,6 @@ class Game extends React.Component {
       stepNumber: step,
       xIsNext: (step % 2) == 0,
     });
-    // notice that we do not update the history
-    // history is updated AFTER we have made a move
   }
 
   render() {
